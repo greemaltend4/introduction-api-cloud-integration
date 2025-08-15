@@ -1,15 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
+  # Function that handles the 'hello' API endpoint
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/
-      Handler: main.lambda_handler
-      Runtime: python3.8
+      CodeUri: src/  # Path to the source code
+      Handler: main.lambda_handler  # Lambda function handler
+      Runtime: python3.8  # Python runtime version
       Events:
         Api:
           Type: Api
           Properties:
-            Path: /hello
-            Method: get
+            Path: /hello  # API endpoint path
+            Method: get  # HTTP method for the endpoint
