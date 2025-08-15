@@ -1,16 +1,16 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  # Function that handles the 'hello' API endpoint
+  # Fonction qui gère le point de terminaison de l'API 'hello'
   HelloWorldFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/  # Path to the source code
-      Handler: main.lambda_handler  # Lambda function handler
-      Runtime: python3.8  # Python runtime version
+      CodeUri: src/  # Chemin vers le code source
+      Handler: main.lambda_handler  # Gestionnaire de la fonction Lambda
+      Runtime: python3.8  # Version de runtime Python
       Events:
         Api:
           Type: Api
           Properties:
-            Path: /hello  # API endpoint path
-            Method: get  # HTTP method for the endpoint
+            Path: /hello  # Chemin du point de terminaison de l'API
+            Method: get  # Méthode HTTP pour le point de terminaison
