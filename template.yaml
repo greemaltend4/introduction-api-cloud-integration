@@ -20,3 +20,7 @@ Resources:
     Type: AWS::Serverless::Api
     Properties:
       StageName: prod  # Nom de l'étape de l'API
+      # Configuration des CORS pour permettre l'accès depuis d'autres origines
+      Cors:
+        AllowMethods: 'GET'
+        AllowOrigin: '*'
