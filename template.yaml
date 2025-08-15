@@ -14,3 +14,9 @@ Resources:
           Properties:
             Path: /hello  # Chemin du point de terminaison de l'API
             Method: get  # Méthode HTTP pour le point de terminaison
+
+  # Configuration de l'API Gateway
+  HelloApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod  # Nom de l'étape de l'API
